@@ -1,50 +1,3 @@
-# Awesome Weather Widget
-Contributors: halgatewood, ghuger, richardgabriel, jwetzell, mrmcx
-
-License: [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
-
-Finally beautiful weather widgets for your beautiful WordPress website.
-
-## Description
-
-This plugin allows you to easily add super clean (and awesome) weather widgets to your site. 
-
-### Weather by OpenWeatherMap or Pirate Weather
-The weather data is available either by [OpenWeatherMap](https://openweathermap.org) or [Pirate Weather](https://pirateweather.net/). 
-
-They require a free key to access the data. 
-
-* [Open Weather Map API Key](http://openweathermap.org/appid#get)
-* [Pirate Weather API Key](https://pirate-weather.apiable.io/)
-
-Once you have the API Key, you can save it in the WordPress admin under `'Settings' -> 'Awesome Weather'`
-
-### Setup
-Use the built in widget with all of its marvelous settings or add it to a page or theme with the shortcode:
-`[awesome-weather owm_city_id="4544349"]` or `[awesome-weather location="Oklahoma City"]`
-
-## Installation
-
-1. Add plugin to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Register for an OpenWeatherMap [API Key](http://openweathermap.org/appid#get)
-1. Add your API Key to the settings field in 'Settings' -> 'Awesome Weather' (added in version 1.5.3)
-1. Use shortcode or widget to display awesome weather on your awesome site
-
-The easiest shortcode setting is just: `[awesome-weather location="Oklahoma City"]`
-
-
-## Screenshots
-
-1. Basic wide layout
-2. Basic tall layout
-3. Micro, using the checkbox 'Hide Stats'
-4. Widget Settings
-5. Background Image Option (1.2)
-6. Add inline styles to your widget and set custom background colors (1.3.1)
-7. Use different background images based on weather (1.5)
-8. Search for the City ID directly in the widget settings (1.5)
-
 ## Changelog
 ### 4.0.2
 - Combination of 3.0.2 with the Pirate Weather replacement
@@ -79,7 +32,7 @@ The easiest shortcode setting is just: `[awesome-weather location="Oklahoma City
 
 ### 1.5.11
 * Get just the weather data with function: awesome_weather_data
-* trim value of the API key in awe_get_appid 
+* trim value of the API key in awe_get_appid
 * removing trailing slash for background images on some systems double slashes were being added
 
 ### 1.5.10
@@ -87,7 +40,7 @@ The easiest shortcode setting is just: `[awesome-weather location="Oklahoma City
 * New lat and lon attributes to get weather by coordinates
 
 ### 1.5.9
-* Updated language to allow for custom translations located at: wp-content/languages/awesome-weather/awesome-weather-{locale}.mo 
+* Updated language to allow for custom translations located at: wp-content/languages/awesome-weather/awesome-weather-{locale}.mo
 * Checkbox to hide the attribution in the widget settings or use shortcode attribute hide_attribution="1"
 
 ### 1.5.8
@@ -141,7 +94,7 @@ The easiest shortcode setting is just: `[awesome-weather location="Oklahoma City
 * Changed .custom class to .awe_custom
 
 ### 1.5
-* You can now speed up your weather and provide better accuracy by using the new Search box in the widget to find the OpenWeatherMap City ID. 
+* You can now speed up your weather and provide better accuracy by using the new Search box in the widget to find the OpenWeatherMap City ID.
 * We also added the ability to use different background images by weather. Also new CSS properties using the weather condition code and text are added so you can target based on weather type.
 * Added several new filters to modify aspects of the weather widget like changing the C and F to a Degree symbol.
 * Fixed an issue where changing the forecast days would not clear the cache.
@@ -160,7 +113,7 @@ More languages correctly supported from the OpenWeatherMap API
 * Fixed spanish translations for weather description
 * Transient bug for languages also
 
-### 1.4.2 
+### 1.4.2
 Added box-sizing: border-box to hopefully clean up the widget in many themes.
 
 ### 1.4.1
@@ -186,10 +139,10 @@ Fixed issue with Location stripping spaces from text cause weather to not get ac
 Moved Google Font out of CSS into enqueue
 
 ### 1.3.2
-* Improved support for poorly coded themes that load the before_title and after_title with extra divs and don't take into account that widgets may not use a title. 
+* Improved support for poorly coded themes that load the before_title and after_title with extra divs and don't take into account that widgets may not use a title.
 * Portuguese translation created by user: alvarogois
 
-### 1.3.1 
+### 1.3.1
 * Added setting for color override
 * Added URL param to clear transient cache '?clear_awesome_widget'
 * Added new translations for the days of the week in the extended forecast
@@ -199,8 +152,8 @@ Moved Google Font out of CSS into enqueue
 ### 1.3
 * Upgraded to most recent OpenWeatherMap APIS
 * Ready for translations
-* Current Locales available from OpenWeatherMap: 
-* English - en, Russian - ru, Italian - it, Spanish - sp, Ukrainian - ua, German - de, Portuguese - pt, Romanian - ro, Polish - pl, Finnish - fi, Dutch - nl, French - fr, Bulgarian - bg, Swedish - se, Chinese Traditional - zh_tw, Chinese Simplified - zh_cn, Turkish - tr 
+* Current Locales available from OpenWeatherMap:
+* English - en, Russian - ru, Italian - it, Spanish - sp, Ukrainian - ua, German - de, Portuguese - pt, Romanian - ro, Polish - pl, Finnish - fi, Dutch - nl, French - fr, Bulgarian - bg, Swedish - se, Chinese Traditional - zh_tw, Chinese Simplified - zh_cn, Turkish - tr
 
 ### 1.2.6
 * Improved error handling with API calls

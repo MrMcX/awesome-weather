@@ -1,38 +1,29 @@
+# Awesome Weather Widget
+Contributors: halgatewood, ghuger, richardgabriel, jwetzell, mrmcx
 
-=== Awesome Weather Widget ===
+License: [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
 
-Contributors: halgatewood,ghuger,richardgabriel,jwetzell,mrmcx
-Donate link: https://halgatewood.com/donate/
-Tags: widgets, sidebar, shortcode, openweathermap, darksky, weather, weather widget, forecast, global, temp, local weather, local forecast
-Requires at least: 5.0
-Tested up to: 5.3
-Stable tag: trunk
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Finally beautiful weather widgets for your beautiful WordPress website.
 
-Finally beautiful weather widgets for your beautiful site.
-
-== Description ==
+## Description
 
 This plugin allows you to easily add super clean (and awesome) weather widgets to your site. 
 
-= Weather by OpenWeatherMap or Pirate Weather =
+### Weather by OpenWeatherMap or Pirate Weather
+The weather data is available either by [OpenWeatherMap](https://openweathermap.org) or [Pirate Weather](https://pirateweather.net/). 
 
-The weather data is available either by [OpenWeatherMap](https://openweathermap.org) or [Pirate Weather](https://pirateweather.net/).
-
-They require a free to access the data. 
+They require a free key to access the data. 
 
 * [Open Weather Map API Key](http://openweathermap.org/appid#get)
 * [Pirate Weather API Key](https://pirate-weather.apiable.io/)
 
 Once you have the API Key, you can save it in the WordPress admin under `'Settings' -> 'Awesome Weather'`
 
-= Setup =
-
+### Setup
 Use the built in widget with all of its marvelous settings or add it to a page or theme with the shortcode:
 `[awesome-weather owm_city_id="4544349"]` or `[awesome-weather location="Oklahoma City"]`
 
-== Installation ==
+## Installation
 
 1. Add plugin to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
@@ -43,7 +34,7 @@ Use the built in widget with all of its marvelous settings or add it to a page o
 The easiest shortcode setting is just: `[awesome-weather location="Oklahoma City"]`
 
 
-== Screenshots ==
+## Screenshots
 
 1. Basic wide layout
 2. Basic tall layout
