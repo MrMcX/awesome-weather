@@ -1,17 +1,13 @@
 <?php
 /*
 Plugin Name: Awesome Weather Widget
-Plugin URI: https://halgatewood.com/awesome-weather
+Plugin URI: https://github.com/MrMcX/awesome-weather
 Description: A weather widget that actually looks cool
-Author: Hal Gatewood
-Author URI: https://www.halgatewood.com
+Author: mrmcx
+Author URI: https://mrmcx.de
 Version: 4.0.2
 Text Domain: awesome-weather
 Domain Path: /languages
-
-Hi DEVS!
-FILTERS AVAILABLE:
-https://halgatewood.com/docs/plugins/awesome-weather-widget/available-filters
 */
 
 
@@ -288,7 +284,7 @@ function awesome_weather_logic( $atts )
 	}
 	else if( $weather->provider == 'darksky' AND !$weather->units )
 	{
-		$weather->units = 'de';
+		$weather->units = 'si';
 	}
 	
 	

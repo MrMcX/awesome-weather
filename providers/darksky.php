@@ -16,7 +16,7 @@ function awesome_weather_get_weather_data_darksky( &$weather )
 	
 	// API KEY
 	$key = awe_get_darksky_key();
-	$units_query = 'auto';
+	$units_query = 'si';
 	
 	// WE NEED A LAT AND LONG
 	if( $weather->latlng == '' AND isset($weather->location) AND $weather->location != '')
@@ -39,16 +39,16 @@ function awesome_weather_get_weather_data_darksky( &$weather )
 	{
 		$weather->locale = 'en';
 		
-		$sytem_locale = get_locale();
+		$system_locale = get_locale();
 		$available_locales = awesome_weather_get_locales();
 	
 	
 	    // CHECK FOR LOCALE
-	    if( in_array( $sytem_locale, $available_locales ) ) $weather->locale = $sytem_locale;
+	    if( in_array( $system_locale, $available_locales ) ) $weather->locale = $system_locale;
 	    
 	    
 	    // CHECK FOR LOCALE BY FIRST TWO DIGITS
-	    if( in_array(substr($sytem_locale, 0, 2), $available_locales ) ) $weather->locale = substr($sytem_locale, 0, 2);
+	    if( in_array(substr($system_locale, 0, 2), $available_locales ) ) $weather->locale = substr($system_locale, 0, 2);
 	}
 	
 	

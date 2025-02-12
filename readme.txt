@@ -2,7 +2,6 @@
 === Awesome Weather Widget ===
 
 Contributors: halgatewood,ghuger,richardgabriel,jwetzell,mrmcx
-Donate link: https://halgatewood.com/donate/
 Tags: widgets, sidebar, shortcode, openweathermap, darksky, weather, weather widget, forecast, global, temp, local weather, local forecast
 Requires at least: 5.0
 Tested up to: 5.3
