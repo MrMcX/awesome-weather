@@ -284,11 +284,11 @@ function awesome_weather_logic( $atts )
 	// DEFAULTS WEATHER UNITS
 	if( $weather->provider == 'openweathermaps' AND !$weather->units ) 
 	{
-		$weather->units = 'F';
+		$weather->units = 'C';
 	}
 	else if( $weather->provider == 'darksky' AND !$weather->units )
 	{
-		$weather->units = 'us';
+		$weather->units = 'de';
 	}
 	
 	
@@ -330,7 +330,7 @@ function awesome_weather_logic( $atts )
 		{
 			$weather->units 			= 'auto';
 			$weather->owm_city_id		= 0;
-			$weather->latlng 			= $_COOKIE['awe_latlng'];
+			$weather->latlng 			= htmlspecialchars($_COOKIE['awe_latlng'], ENT_QUOTES, 'UTF-8');
 			$weather->show_bubble 		= false;
 			$weather->user_provided 	= true;
 		}
@@ -728,7 +728,7 @@ function awe_ping_owm_for_id( )
 	$appid = awe_get_appid();
 	if( $appid ) $appid_string = '&APPID=' . $appid;
 
-	$location = urlencode($_GET['location']);
+	$location = htmlspecialchars(urlencode($_GET['location']), ENT_QUOTES, 'UTF-8');
 	$units = strtoupper($_GET['location']) == 'C' ? 'metric' : 'imperial';
 	$owm_ping = AWESOME_WEATHER_OWM_API_URL . 'find?q=' . $location . '&units=' . $units . '&mode=json' . $appid_string;
 	$owm_ping_get = wp_remote_get( $owm_ping );
@@ -772,7 +772,7 @@ function awe_get_latlng_ajax()
 	
 	if( isset($_GET['location']) )
 	{
-		$latlng = awe_get_latlng( $_GET['location'] );
+		$latlng = awe_get_latlng( $_GET['location'] );      // TODO: sanitize
 		if( $latlng )
 		{
 			echo json_encode(array( 'error' => '', 'latlng' => $latlng ));
